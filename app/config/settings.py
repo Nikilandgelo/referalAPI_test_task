@@ -15,8 +15,22 @@ class Settings(BaseSettings):
     REFERRAL_CODE_DAYS: int = 30
 
     title: str = "Referral API"
-    summary: str = "Soon..."
-    description: str = "Soon..."
+    summary: str = ("A comprehensive API for user referral management, "
+                    "enabling unique referral codes, and tracking.")
+    description: str = (
+        "The Referral API is designed to manage user referral systems, "
+        "offering features for creating, validating, and managing unique "
+        "referral codes. This API allows users to generate referral links, "
+        "and track successful referrals. Key features include:\n\n"
+        "- **User Registration & Authentication**: Secure user authentication "
+        "with JWT tokens.\n"
+        "- **Referral Code Generation**: Create unique codes for users to "
+        "share with others.\n"
+        "- **Referral Tracking**: Track successful referrals and manage "
+        "reward distribution.\n"
+        "Ideal for applications that aim to incentivize user growth through "
+        "a referral system."
+    )
     version: str = "1.0.0"
     contact: dict = {
         "name": "Selivanov Nikita",
