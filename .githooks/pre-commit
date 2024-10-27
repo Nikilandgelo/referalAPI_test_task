@@ -1,0 +1,25 @@
+#!/bin/bash
+echo "Running pre-commit hook..."
+VENV_PATH=".venv/bin"
+
+if [ ! -d "$VENV_PATH" ]; then
+    echo "Virtual environment not found at {$VENV_PATH}. Please set up your environment."
+    exit 1
+fi
+
+echo "Running isort..."
+${VENV_PATH}/isort .
+if [ $? -ne 0 ]; then
+    echo "isort failed, please fix the import order."
+    exit 1
+fi
+
+echo "Running black..."
+${VENV_PATH}/black . --line-length=79
+if [ $? -ne 0 ]; then
+    echo "black failed, please fix the code formatting."
+    exit 1
+fi
+
+echo "Pre-commit hook finished successfully."
+exit 0

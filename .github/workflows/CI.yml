@@ -1,0 +1,24 @@
+name: CI pipeline
+on:
+    push:
+
+jobs:
+    CI:
+        name: CI pipeline
+        runs-on: ubuntu-22.04
+        steps:
+            - name: Pulling repository
+              uses: actions/checkout@v4.1.7
+              with:
+                repository: Nikilandgelo/referalAPI_test_task
+            - name: Set up Python
+              uses: actions/setup-python@v5.2.0
+              with:
+                  python-version: 3.12
+            - name: Install dependencies
+              run: |
+                  pip install pip-tools
+                  pip-compile
+                  pip-sync
+            - name: Lint
+              run: flake8 .
