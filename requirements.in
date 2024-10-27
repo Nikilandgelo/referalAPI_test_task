@@ -1,0 +1,9 @@
+fastapi[all]
+sqlmodel
+asyncpg
+sqlalchemy[asyncio]
+isort
+black
+flake8
+bcrypt
+Authlib
