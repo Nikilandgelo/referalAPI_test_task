@@ -20,6 +20,6 @@ def make_autoimport(path_to_package: list[str], name_of_package: str) -> list:
     """
     all_submodules: list = []
     for module_info in iter_modules(path_to_package):
-        module = import_module(f".{module_info.name}", package=name_of_package)
+        _ = import_module(f".{module_info.name}", package=name_of_package)
         all_submodules.append(module_info.name)
     return all_submodules

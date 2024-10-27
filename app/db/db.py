@@ -12,7 +12,7 @@ from sqlalchemy.ext.asyncio.engine import AsyncEngine
 from sqlmodel import SQLModel
 
 from app.config.settings import Settings, get_settings
-from app.models import *
+from app.models import *    # noqa: F401, F403
 
 settings: Settings = get_settings()
 

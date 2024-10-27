@@ -7,10 +7,10 @@ from app.serializers.user import UserInSerializer
 
 if TYPE_CHECKING:
     from app.models.referral_code import ReferralCode
-    from app.models.user import User
+    from app.models.user import User    # noqa: F811
 
 
-class User(UserInSerializer, table=True):
+class User(UserInSerializer, table=True):               # noqa: F811
     referral_code: "ReferralCode" = Relationship(
         back_populates="owner",
         cascade_delete=True,

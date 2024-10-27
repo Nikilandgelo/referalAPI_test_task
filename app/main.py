@@ -3,7 +3,7 @@ from fastapi import FastAPI
 from app.config.settings import Settings, get_settings
 from app.db.db import app_lifespan
 from app.routes import ALL_ROUTERS
-from app.views import *
+from app.views import *     # noqa: F401, F403
 
 settings: Settings = get_settings()
 

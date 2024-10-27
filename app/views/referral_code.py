@@ -40,7 +40,7 @@ async def create_referral_code(
     "/",
     response_model=ReferralCodeSerializer,
     summary="Get Referral Code by Email",
-    description="Get the referral code associated with the given user's email.",
+    description="Get the referral code associated with the given user's email."
 )
 async def get_referral_code_by_email(email: str):
     user: User = await get_object_or_404(User, email=email)
