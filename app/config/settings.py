@@ -15,8 +15,10 @@ class Settings(BaseSettings):
     REFERRAL_CODE_DAYS: int = 30
 
     title: str = "Referral API"
-    summary: str = ("A comprehensive API for user referral management, "
-                    "enabling unique referral codes, and tracking.")
+    summary: str = (
+        "A comprehensive API for user referral management, "
+        "enabling unique referral codes, and tracking."
+    )
     description: str = (
         "The Referral API is designed to manage user referral systems, "
         "offering features for creating, validating, and managing unique "
