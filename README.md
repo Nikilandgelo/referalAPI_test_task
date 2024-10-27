@@ -2,6 +2,7 @@
 This repository contains a `FastAPI` application for a referral system, featuring `JWT` authentication, unique referral code generation, user management, and referral tracking. It’s designed for efficient user registration and referral management within a modern, scalable API framework.
 
 ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/Nikilandgelo/referalAPI_test_task/CI.yml?style=for-the-badge&logo=githubactions&logoColor=white&label=CI&labelColor=blue)
+![Python Version](https://img.shields.io/badge/Python-3.13-blue?style=for-the-badge&logo=python&logoColor=white)
 
 ## 🚀 Key Features
 - 🔐 JWT Authentication: Secure user authentication and session management.
